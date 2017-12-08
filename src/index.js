@@ -242,6 +242,7 @@ class CurrencyInput extends Component {
                 onFocus={this.handleFocus}
                 onMouseUp={this.handleFocus}
                 {...this.state.customProps}
+                placeholder={this.props.placeholder}
             />
         )
     }
@@ -265,7 +266,8 @@ CurrencyInput.propTypes = {
     allowEmpty: PropTypes.bool,
     prefix: PropTypes.string,
     suffix: PropTypes.string,
-    selectAllOnFocus: PropTypes.bool
+    selectAllOnFocus: PropTypes.bool,
+    placeholder: PropTypes.string,
 };
 
 
@@ -280,7 +282,8 @@ CurrencyInput.defaultProps = {
     allowNegative: false,
     prefix: '',
     suffix: '',
-    selectAllOnFocus: false
+    selectAllOnFocus: false,
+    placeholder: '',
 };
 
 
