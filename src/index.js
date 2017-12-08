@@ -233,11 +233,13 @@ class CurrencyInput extends Component {
      * @see https://facebook.github.io/react/docs/component-specs.html#render
      */
     render() {
+        const value = this.props.value ? this.state.maskedValue : null
+
         return (
             <input
                 ref={(input) => { this.theInput = input; }}
                 type={this.props.inputType}
-                value={this.state.maskedValue}
+                value={value}
                 onChange={this.handleChange}
                 onFocus={this.handleFocus}
                 onMouseUp={this.handleFocus}
